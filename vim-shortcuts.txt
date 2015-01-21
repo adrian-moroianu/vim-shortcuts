@@ -112,6 +112,12 @@ CTRL+r	        -	Redo
 ;		-	Repeat last f, t, F, or T command
 ,		-	Repeat last f, t, F, or T command in opposite direction
 
+## HISTORY/COMMAND BUFFER ##
+
+q:		-	list history in command buffer
+q/		-	search history in command buffer
+CTRL+c CTRL+c   -       close the command buffer
+
 :set list	-	show hidden characters
 
 gg=G	        -	Format HTML. Make sure FileType is set to html with :setf html
