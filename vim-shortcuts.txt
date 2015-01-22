@@ -108,11 +108,11 @@ u		-	Undo
 U		-	Undo all changes on current line
 CTRL+r	        -	Redo
 
-g~  - switch case under cursor
-g~$ - Toggle case of all characters to end of line.
-g~~ - Toggle case of the current line (same as V~).
-gUU - switch the current line to upper case 
-guu - switch the current line to lower case
+g~  		- 	switch case under cursor
+g~$ 		- 	Toggle case of all characters to end of line.
+g~~ 		- 	Toggle case of the current line (same as V~).
+gUU 		- 	switch the current line to upper case 
+guu 		- 	switch the current line to lower case
 
 .		-	Repeat last change or delete
 ;		-	Repeat last f, t, F, or T command
