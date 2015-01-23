@@ -56,6 +56,9 @@ D		-	Delete until end of line
 
 y		-	Yank (copy) highlighted text
 yy		-	Yank current linepPut (paste) yanked text below current line
+yw		-	yank a word from the cursor
+ynw		- 	yank n words from the cursor
+y$		-	yank till the end of the line
 P		-	Put yanked text above current line
 J		-	Join current line with the next line. Use gJ to exclude join-position space
 
