@@ -1,8 +1,7 @@
 # VIM KEYBOARD SHORTCUTS
 
-###MOVEMENT
+##MOVEMENT##
 
-```
 h		-	Move left
 j		-	Move down
 k		-	Move up
@@ -44,9 +43,8 @@ ma		-	Set a marker at cursor position to come back to later. a can be any charac
 %		-	Move cursor to next brace, bracket or comment paired to the current cursor location
 ```
 
-### DELETION
+## DELETION ##
 
-```
 x		-	Delete character forward (under cursor). use x do delete backwards (before cursor)
 r		-	Replace single character under cursor, and remain in normal mode
 s		-	Delete character under cursor, then switch to insert mode
@@ -54,7 +52,6 @@ s		-	Delete character under cursor, then switch to insert mode
 dm		-	Delete in direction of movement m. For m, you can also use w, b, or any other variation
 dd		-	Delete entire current line
 D		-	Delete until end of line
-```
 
 ### YANK & PUT
 
