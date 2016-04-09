@@ -9,7 +9,7 @@ l		-	Move right
 $		-	Move to end of line
 0		-	Move to beginning of line (including whitespace)
 ^		-	Move to first character on line
-gg	    -	Move to first line of file
+gg	      -	Move to first line of file
 G		-	Move to last line of file
 
 w		-	Move forward to next word, with cursor on first character (use W to jump by whitespace only)
