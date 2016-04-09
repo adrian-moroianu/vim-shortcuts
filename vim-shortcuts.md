@@ -131,6 +131,9 @@ g~~      -   Toggle case of the current line (same as V~).
 gUU      -   switch the current line to upper case 
 guu      -   switch the current line to lower case
 
+CTRL+A   -   Increment the number at cursor
+CTRL+X   -   Decrement the number at cursor
+
 .        -   Repeat last change or delete
 ;        -   Repeat last f, t, F, or T command
 ,        -   Repeat last f, t, F, or T command in opposite direction
