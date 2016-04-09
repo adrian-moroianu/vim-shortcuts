@@ -9,7 +9,7 @@ l		-	Move right
 $		-	Move to end of line
 0		-	Move to beginning of line (including whitespace)
 ^		-	Move to first character on line
-gg		-	Move to first line of file
+gg	-	Move to first line of file
 G		-	Move to last line of file
 
 w		-	Move forward to next word, with cursor on first character (use W to jump by whitespace only)
@@ -30,17 +30,17 @@ L		-	Move cursor to last line of current visible window
 fc		-	Move cursor to next occurrence of character c on the current line. Use Fc to move backwards
 tc		-	Move cursor till next character c on the current line. Use Tc to move backwards
 
-*		-	Search forward for word under cursor
-#		-	Search backwards for word under cursor
-/word	        -	Search forward for word. Accepts regular expressions to search
-?word	        -	Search backwards for word. Accepts regular expressions to search
-n		-	Repeat the last / or ? command
-N		-	Repeat the last / or ? command in the opposite direction
+*		  -	Search forward for word under cursor
+#		  -	Search backwards for word under cursor
+/word	-	Search forward for word. Accepts regular expressions to search
+?word	-	Search backwards for word. Accepts regular expressions to search
+n		  -	Repeat the last / or ? command
+N		  -	Repeat the last / or ? command in the opposite direction
 
 ma		-	Set a marker at cursor position to come back to later. a can be any character you choose
 `a		-	Move cursor to exact position of the marker you set with ma
 'a		-	Move cursor to the first character of the line marked with ma
-%		-	Move cursor to next brace, bracket or comment paired to the current cursor location
+%		  -	Move cursor to next brace, bracket or comment paired to the current cursor location
 
 ## DELETION ##
 
@@ -50,17 +50,18 @@ s		-	Delete character under cursor, then switch to insert mode
 
 dm		-	Delete in direction of movement m. For m, you can also use w, b, or any other variation
 dd		-	Delete entire current line
-D		-	Delete until end of line
+D		  -	Delete until end of line
 
 ### YANK & PUT
 
-y		-	Yank (copy) highlighted text
+y		  -	Yank (copy) highlighted text
 yy		-	Yank current linepPut (paste) yanked text below current line
 yw		-	yank a word from the cursor
-ynw		- 	yank n words from the cursor
+ynw		- yank n words from the cursor
 y$		-	yank till the end of the line
-P		-	Put yanked text above current line
-J		-	Join current line with the next line. Use gJ to exclude join-position space
+P		  -	Put yanked text above current line
+J		  -	Join current line with the next line. Use gJ to exclude join-position space
+xp    - transpose two letters (delete and paste, technically)
 
 ## NORMAL MODE -> INSERT MODE ##
 
@@ -78,10 +79,11 @@ C		-	Delete (change) from cursor to end of line, and enter insert mode
 
 ## VISUAL MODE ##
 
-v		-	Enter visual mode and highlight characters
-V		-	Enter visual mode and highlight lines
-CTRL+v	        -	Enter visual block mode and highlight exactly where the cursor moves
-o		-	Switch cursor from first & last character of highlighted block while in visual mode
+v		  -	Enter visual mode and highlight characters
+V		  -	Enter visual mode and highlight lines
+CTRL+v -	Enter visual block mode and highlight exactly where the cursor moves
+o		  -	Switch cursor from first & last character of highlighted block while in visual mode
+~     - Swap case under selection
 
 vat		-	Highlight all text up to and including the parent element
 vit		-	Highlight all text up to the parent element, excluding the element
@@ -112,7 +114,8 @@ zR        -   decreases the foldlevel to zero -- all folds will be open.
 
 u		-	Undo
 U		-	Undo all changes on current line
-CTRL+r	        -	Redo
+CTRL+R  -	Redo
+.       - Redo
 
 g~  		- 	switch case under cursor
 g~$ 		- 	Toggle case of all characters to end of line.
