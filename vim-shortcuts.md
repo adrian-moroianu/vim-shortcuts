@@ -246,6 +246,8 @@ CTRL+w +       -   Incrementally increase the window's height. Takes a parameter
 :tabs               -   list opened tabs
 :tabc               -   close the active tab
 :tabn and tabp      -   Go to next tab or previous tab
+:tabfirst           -   Go to the first available tab
+:tablast            -   Go to the last available tab
 :help tabpage       -   help for tabs
 
 vim -p *.txt        -   open all txt files in tabs
