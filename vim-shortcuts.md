@@ -152,11 +152,48 @@ CTRL+n          -   Press after typing part of a word. It scrolls down the list 
 CTRL+p          -   Press after typing part of a word. It scrolls up the list of all previously used words
 ```
 
-###COMMENT LINES (TCOMMENT PLUGIN)###
+###BUFFERS###
 ```
-CTRL+_ CTRL+_   -   Comment a line using tcomment
-CTRL+V          -   #{Select the block before commenting a block,
-CTRL+_ CTRL+_   -   Comment a block of line using tcomment}
+:ls (or :buffers)   -   list / show available buffers
+:e filename         -   Edit a file in a new buffer
+:bnext (or :bn)     -   go to next buffer
+:bprev (of :bp)     -   go to previous buffer
+:bdelete (or :bd)   -   unload a buffer (close a file)
+:bwipeout (or :bw)  -   unload a buffer and deletes it
+:b [N]              -   The number of the buffer you are interested to open
+:ball               -   opens up all available buffers in horizontal split window
+:vertical ball      -   opens up all available buffero in vertical split window
+:q                  -   close the buffer window
+:help buffers       -   help for buffers
+```
+
+###TAB VIEWS###
+```
+:tabe filename      -   opens the file in newtab
+:tabe new           -   open an empty tab
+:tabs               -   list opened tabs
+:tabc               -   close the active tab
+:tabn and tabp      -   Go to next tab or previous tab
+:tabfirst           -   Go to the first available tab
+:tablast            -   Go to the last available tab
+:help tabpage       -   help for tabs
+
+vim -p *.txt        -   open all txt files in tabs
+```
+
+###TAB NAVIGATION###
+```
+gt                  -   go to next tab
+gT                  -   go to previous tab
+{i}gt               -   go to tab in position i
+```
+
+###TAB SHORTCUTS###
+```
+CTRL+W T            -   Break out current window into a new tabview
+CTRL+W o            -   Close every window in the current tabview but the current one
+CTRL+W n            -   create a new window in the current tabview
+CTRL+W c            -   Close current window in the current tabview
 ```
 
 ###WINDOW MANAGEMENT###
@@ -224,48 +261,11 @@ CTRL+w -       -   Incrementally decrease the window's height. Takes a parameter
 CTRL+w +       -   Incrementally increase the window's height. Takes a parameter, e.g. CTRL-w 10 +
 ```
 
-###BUFFERS###
+###COMMENT LINES (TCOMMENT PLUGIN)###
 ```
-:ls (or :buffers)   -   list / show available buffers
-:e filename         -   Edit a file in a new buffer
-:bnext (or :bn)     -   go to next buffer
-:bprev (of :bp)     -   go to previous buffer
-:bdelete (or :bd)   -   unload a buffer (close a file)
-:bwipeout (or :bw)  -   unload a buffer and deletes it
-:b [N]              -   The number of the buffer you are interested to open
-:ball               -   opens up all available buffers in horizontal split window
-:vertical ball      -   opens up all available buffero in vertical split window
-:q                  -   close the buffer window
-:help buffers       -   help for buffers
-```
-
-###TAB VIEWS###
-```
-:tabe filename      -   opens the file in newtab
-:tabe new           -   open an empty tab
-:tabs               -   list opened tabs
-:tabc               -   close the active tab
-:tabn and tabp      -   Go to next tab or previous tab
-:tabfirst           -   Go to the first available tab
-:tablast            -   Go to the last available tab
-:help tabpage       -   help for tabs
-
-vim -p *.txt        -   open all txt files in tabs
-```
-
-###TAB NAVIGATION###
-```
-gt                  -   go to next tab
-gT                  -   go to previous tab
-{i}gt               -   go to tab in position i
-```
-
-###TAB SHORTCUTS###
-```
-CTRL+W T            -   Break out current window into a new tabview
-CTRL+W o            -   Close every window in the current tabview but the current one
-CTRL+W n            -   create a new window in the current tabview
-CTRL+W c            -   Close current window in the current tabview
+CTRL+_ CTRL+_   -   Comment a line using tcomment
+CTRL+V          -   #{Select the block before commenting a block,
+CTRL+_ CTRL+_   -   Comment a block of line using tcomment}
 ```
 
 ###NERDTree Plugin###
