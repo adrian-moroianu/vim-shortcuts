@@ -1,7 +1,7 @@
 # VIM KEYBOARD SHORTCUTS
 
 ##MOVEMENT##
-
+```
 h        -   Move left
 j        -   Move down
 k        -   Move up
@@ -41,9 +41,10 @@ ma       -   Set a marker at cursor position to come back to later. a can be any
 `a       -   Move cursor to exact position of the marker you set with ma
 'a       -   Move cursor to the first character of the line marked with ma
 %        -   Move cursor to next brace, bracket or comment paired to the current cursor location
+```
 
 ## DELETION ##
-
+```
 x        -   Delete character forward (under cursor). use x do delete backwards (before cursor)
 r        -   Replace single character under cursor, and remain in normal mode
 s        -   Delete character under cursor, then switch to insert mode
@@ -51,9 +52,10 @@ s        -   Delete character under cursor, then switch to insert mode
 dm       -   Delete in direction of movement m. For m, you can also use w, b, or any other variation
 dd       -   Delete entire current line
 D        -   Delete until end of line
+```
 
 ### YANK & PUT
-
+```
 y        -   Yank (copy) highlighted text
 yy       -   Yank current linepPut (paste) yanked text below current line
 yw       -   Yank a word from the cursor
@@ -62,9 +64,10 @@ y$       -   Yank till the end of the line
 P        -   Put yanked text above current line
 J        -   Join current line with the next line. Use gJ to exclude join-position space
 xp       -   Transpose two letters (delete and paste, technically)
+```
 
 ## NORMAL MODE -> INSERT MODE ##
-
+```
 i        -   Enter insert mode to the left of the cursor
 a        -   Enter insert mode to the right of the cursor
 I        -   Enter insert mode at first character of current line
@@ -76,9 +79,10 @@ O        -   Insert line above current line and enter insert mode
 cm       -   Delete (change) the character or word (w) in motion m, then enter insert mode
 cc       -   Delete current line and enter insert mode (unlike dd which leaves you in normal mode)
 C        -   Delete (change) from cursor to end of line, and enter insert mode
+```
 
 ## VISUAL MODE ##
-
+```
 v        -   Enter visual mode and highlight characters
 V        -   Enter visual mode and highlight lines
 CTRL+v   -   Enter visual block mode and highlight exactly where the cursor moves
@@ -87,14 +91,14 @@ o        -   Switch cursor from first & last character of highlighted block whil
 <<       -   Shift lines to left
 >>       -   Shift lines to right
 
-
 vat      -   Highlight all text up to and including the parent element
 vit      -   Highlight all text up to the parent element, excluding the element
 vac      -   Highlight all text including the pair marked with c (like va<, va' or va")
 vic      -   Highlight all text inside the pair marked with c
+```
 
 ## VIM FOLD COMMANDS ##
-
+```
 zf#j      -   creates a fold from the cursor down # lines.
 zf/string -   creates a fold from the cursor to string .
 zo        -   opens a fold at the cursor.
@@ -112,9 +116,10 @@ zr        -   decreases the foldlevel by one.
 zR        -   decreases the foldlevel to zero -- all folds will be open.
 [z        -   move to start of open fold.
 ]z        -   move to end of open fold.
+```
 
 ## MISCELLANEOUS ##
-
+```
 u        -   Undo
 U        -   Undo all changes on current line
 CTRL+R   -   Redo
@@ -129,9 +134,10 @@ guu      -   switch the current line to lower case
 .        -   Repeat last change or delete
 ;        -   Repeat last f, t, F, or T command
 ,        -   Repeat last f, t, F, or T command in opposite direction
+```
 
 ## HISTORY/COMMAND BUFFER ##
-
+```
 q:              -   list history in command buffer
 q/              -   search history in command buffer
 CTRL+c CTRL+c   -   close the command buffer
@@ -141,15 +147,17 @@ CTRL+c CTRL+c   -   close the command buffer
 gg=G            -   Format HTML. Make sure FileType is set to html with :setf html
 CTRL+n          -   Press after typing part of a word. It scrolls down the list of all previously used words
 CTRL+p          -   Press after typing part of a word. It scrolls up the list of all previously used words
+```
 
 ## COMMENT LINES (TCOMMENT PLUGIN) ## 
-
+```
 CTRL+_ CTRL+_   -   Comment a line using tcomment
 CTRL+V          -   #{Select the block before commenting a block,
 CTRL+_ CTRL+_   -   Comment a block of line using tcomment}
+```
 
 ## WINDOW MANAGEMENT ##
-
+```
 #split screen horizontal
 :split filename
 vim -o file1 file2
@@ -174,9 +182,10 @@ CTRL+w v       -   Split current window vertically
 CTRL+w c       -   Close current window
 CTRL+w m       -   Move to window according to motion m
 CTRL+w o       -   Maxmize current window (note: this overwrites your current window configuration)
+```
 
 ##MOVING WINDOWS ##
-
+```
 CTRL+W r       -   Swap bottom/top if split horizontally
 CTRL+W R       -   Swap top/bottom if split horizontally
 
@@ -187,18 +196,19 @@ CTRL+w H       -   Move current window the far left and use the full height of t
 CTRL+w J       -   Move current window the far bottom and use the full width of the screen
 CTRL+w K       -   Move current window the far top and full width of the screen
 CTRL+w L       -   Move current window the far right and full height of the screen
+```
 
 ## NAVIGATE BETWEEN WINDOWS ##
-
+```
 CTRL+w CTRL+w  -   switch between windows
 CTRL+w UP      -   Move to the top window from current window
 CTRL+w DOWN    -   Move to the bottom window from current window
 CTRL+w LEFT    -   Move to the left window from current window
 CTRL+w RIGHT   -   Move to the right window from current window
-
+```
 
 ## RESIZING WINDOWS ##
-
+```
 #Sometimes windows open up funny or are rendered incorrectly after separating from an external monitor. Or maybe you want to make more room for an important file.
 
 CTRL+w _       -   Max out the height of the current split
@@ -209,8 +219,10 @@ CTRL+w >       -   Incrementally increase the window to the right. Takes a param
 CTRL+w <       -   Incrementally increase the window to the left. Takes a parameter, e.g. CTRL-w 20 <
 CTRL+w -       -   Incrementally decrease the window's height. Takes a parameter, e.g. CTRL-w 10 -
 CTRL+w +       -   Incrementally increase the window's height. Takes a parameter, e.g. CTRL-w 10 +
+```
 
 ##BUFFERS##
+```
 :ls (or :buffers)   -   list / show available buffers
 :e filename         -   Edit a file in a new buffer
 :bnext (or :bn)     -   go to next buffer
@@ -222,28 +234,35 @@ CTRL+w +       -   Incrementally increase the window's height. Takes a parameter
 :vertical ball      -   opens up all available buffero in vertical split window
 :q                  -   close the buffer window
 :help buffers       -   help for buffers
+```
 
 ##TAB VIEWS##
+```
 :tabe filename      -   opens the file in newtab
 :tabe new           -   open an empty tab
 :tabs               -   list opened tabs
 :tabc               -   close the active tab
 :tabn and tabp      -   Go to next tab or previous tab
 :help tabpage       -   help for tabs
+```
 
 ## TAB NAVIGATION ##
+```
 gt                  -   go to next tab
 gT                  -   go to previous tab
 {i}gt               -   go to tab in position i
+```
 
 ## TAB SHORTCUTS ##
+```
 CTRL+W T            -   Break out current window into a new tabview
 CTRL+W o            -   Close every window in the current tabview but the current one
 CTRL+W n            -   create a new window in the current tabview
 CTRL+W c            -   Close current window in the current tabview
+```
 
 ## NERDTree Plugin ##
-
+```
 CTRL-n              -   Toggle
 
 m                   -   opens the  menu
@@ -251,8 +270,7 @@ m                   -   opens the  menu
 i                   -   horizontal split
 s                   -   vertical split
 CTRL-w + <-|->      -  (left or right) to navigate 
-
-
+```
 
 More details:
 https://www.cs.oberlin.edu/~kuperman/help/vim/markers.html
