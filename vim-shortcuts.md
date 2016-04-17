@@ -29,6 +29,7 @@ L        -   Move cursor to last line of current visible window
 
 fc       -   Move cursor to next occurrence of character c on the current line. Use Fc to move backwards
 tc       -   Move cursor till next character c on the current line. Use Tc to move backwards
+%        -   Move cursor to next brace, bracket or comment paired to the current cursor location
 
 *        -   Search forward for word under cursor
 #        -   Search backwards for word under cursor
@@ -36,11 +37,25 @@ tc       -   Move cursor till next character c on the current line. Use Tc to mo
 ?word    -   Search backwards for word. Accepts regular expressions to search
 n        -   Repeat the last / or ? command
 N        -   Repeat the last / or ? command in the opposite direction
+```
 
-ma       -   Set a marker at cursor position to come back to later. a can be any character you choose
-`a       -   Move cursor to exact position of the marker you set with ma
-'a       -   Move cursor to the first character of the line marked with ma
-%        -   Move cursor to next brace, bracket or comment paired to the current cursor location
+###MARKING###
+```
+ma        -   Set a marker a at cursor position to come back to later. a can be any character you choose
+mb        -   Set a marker b at current position
+`a        -   Move cursor to exact position of the marker you set with ma
+'a        -   Move cursor to the first character of the line marked with ma
+
+d'a 	    -   Delete from current line to line of mark a
+d`a 	    -   Delete from current cursor position to position of mark a
+c'a 	    -   Change text from current line to line of mark a
+y`a 	    -   yank text to unnamed buffer from cursor to position of mark a
+
+:marks 	  -   list all the current marks
+:marks ab - 	list marks a, b
+
+'a,'bs/test/foo/g - search and replace test with foo between markers a and b
+
 ```
 
 ###DELETION###
@@ -97,10 +112,13 @@ vac      -   Highlight all text including the pair marked with c (like va<, va' 
 vic      -   Highlight all text inside the pair marked with c
 ```
 
-###VIM FOLD COMMANDS###
+###VIM FOLDING###
 ```
 zf#j      -   creates a fold from the cursor down # lines.
 zf/string -   creates a fold from the cursor to string .
+v{move}zf -   creates a visual select fold
+zf'a      -   creates a fold from cursor to mark a
+
 zo        -   opens a fold at the cursor.
 zO        -   opens all folds at the cursor.
 za        -   Toggles a fold at the cursor.
