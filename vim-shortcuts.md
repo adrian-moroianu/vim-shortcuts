@@ -134,6 +134,11 @@ zr        -   decreases the foldlevel by one.
 zR        -   decreases the foldlevel to zero -- all folds will be open.
 [z        -   move to start of open fold.
 ]z        -   move to end of open fold.
+
+:set foldmethod=manual         -  default method v{select block}zf to fold
+:set foldmethod=marker         -  use marker fold method {{{
+:set foldemethod=marker/*,*/   -  user custom marker fold method
+:set foldmethod=indent         -  automatically fold programms per its indentation
 ```
 
 ###MISCELLANEOUS###
