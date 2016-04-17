@@ -235,6 +235,11 @@ vim -O file1 file2
 #vertical resize
 :vertical resize 20
 
+#diff
+:diffs, diffsplit {filename} - diffs the current window with the file given
+:diffoff  - turns off diff selection
+
+
 CTRL+w s       -   Split current window horizontally
 CTRL+w v       -   Split current window vertically
 CTRL+w c       -   Close current window
