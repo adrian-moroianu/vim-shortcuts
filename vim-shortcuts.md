@@ -39,23 +39,19 @@ n        -   Repeat the last / or ? command
 N        -   Repeat the last / or ? command in the opposite direction
 ```
 
-###MARKING###
+###NORMAL MODE -> INSERT MODE###
 ```
-ma        -   Set a marker a at cursor position to come back to later. a can be any character you choose
-mb        -   Set a marker b at current position
-`a        -   Move cursor to exact position of the marker you set with ma
-'a        -   Move cursor to the first character of the line marked with ma
+i        -   Enter insert mode to the left of the cursor
+a        -   Enter insert mode to the right of the cursor
+I        -   Enter insert mode at first character of current line
+A        -   Enter insert mode at last character of current line
 
-d'a       -   Delete from current line to line of mark a
-d`a       -   Delete from current cursor position to position of mark a
-c'a       -   Change text from current line to line of mark a
-y`a       -   Yank text to unnamed buffer from cursor to position of mark a
+o        -   Insert line below current line and enter insert mode
+O        -   Insert line above current line and enter insert mode
 
-:marks 	  -   List all the current marks
-:marks ab -   List marks a, b
-
-'a,'bs/test/foo/g - Search and replace test with foo between markers a and b
-
+cm       -   Delete (change) the character or word (w) in motion m, then enter insert mode
+cc       -   Delete current line and enter insert mode (unlike dd which leaves you in normal mode)
+C        -   Delete (change) from cursor to end of line, and enter insert mode
 ```
 
 ###DELETION###
@@ -81,21 +77,6 @@ J        -   Join current line with the next line. Use gJ to exclude join-positi
 xp       -   Transpose two letters (delete and paste, technically)
 ```
 
-###NORMAL MODE -> INSERT MODE###
-```
-i        -   Enter insert mode to the left of the cursor
-a        -   Enter insert mode to the right of the cursor
-I        -   Enter insert mode at first character of current line
-A        -   Enter insert mode at last character of current line
-
-o        -   Insert line below current line and enter insert mode
-O        -   Insert line above current line and enter insert mode
-
-cm       -   Delete (change) the character or word (w) in motion m, then enter insert mode
-cc       -   Delete current line and enter insert mode (unlike dd which leaves you in normal mode)
-C        -   Delete (change) from cursor to end of line, and enter insert mode
-```
-
 ###VISUAL MODE###
 ```
 v        -   Enter visual mode and highlight characters
@@ -110,6 +91,25 @@ vat      -   Highlight all text up to and including the parent element
 vit      -   Highlight all text up to the parent element, excluding the element
 vac      -   Highlight all text including the pair marked with c (like va<, va' or va")
 vic      -   Highlight all text inside the pair marked with c
+```
+
+###MARKING###
+```
+ma        -   Set a marker a at cursor position to come back to later. a can be any character you choose
+mb        -   Set a marker b at current position
+`a        -   Move cursor to exact position of the marker you set with ma
+'a        -   Move cursor to the first character of the line marked with ma
+
+d'a       -   Delete from current line to line of mark a
+d`a       -   Delete from current cursor position to position of mark a
+c'a       -   Change text from current line to line of mark a
+y`a       -   Yank text to unnamed buffer from cursor to position of mark a
+
+:marks 	  -   List all the current marks
+:marks ab -   List marks a, b
+
+'a,'bs/test/foo/g - Search and replace test with foo between markers a and b
+
 ```
 
 ###VIM FOLDING###
