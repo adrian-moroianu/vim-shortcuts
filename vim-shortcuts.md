@@ -46,15 +46,15 @@ mb        -   Set a marker b at current position
 `a        -   Move cursor to exact position of the marker you set with ma
 'a        -   Move cursor to the first character of the line marked with ma
 
-d'a 	    -   Delete from current line to line of mark a
-d`a 	    -   Delete from current cursor position to position of mark a
-c'a 	    -   Change text from current line to line of mark a
-y`a 	    -   yank text to unnamed buffer from cursor to position of mark a
+d'a       -   Delete from current line to line of mark a
+d`a       -   Delete from current cursor position to position of mark a
+c'a       -   Change text from current line to line of mark a
+y`a       -   Yank text to unnamed buffer from cursor to position of mark a
 
-:marks 	  -   list all the current marks
-:marks ab - 	list marks a, b
+:marks 	  -   List all the current marks
+:marks ab -   List marks a, b
 
-'a,'bs/test/foo/g - search and replace test with foo between markers a and b
+'a,'bs/test/foo/g - Search and replace test with foo between markers a and b
 
 ```
 
