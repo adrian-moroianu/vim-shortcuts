@@ -291,6 +291,12 @@ CTRL+V          -   #{Select the block before commenting a block,
 CTRL+_ CTRL+_   -   Comment a block of line using tcomment}
 ```
 
+### MODELINE MAGIC ###
+```
+:set modeline  -    Enable modeline magic or add this option to your .vimrc   
+\ml            -    write the modeline based on your settings to the file
+```
+
 ###NERDTree Plugin###
 ```
 CTRL-n              -   Toggle
