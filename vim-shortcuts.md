@@ -312,7 +312,12 @@ i                   -   horizontal split
 s                   -   vertical split
 CTRL-w + <-|->      -  (left or right) to navigate 
 ```
+### PERMISSION OVERRIDE ###
+```
+:w !sudo tee %            -    Allows to override the permission of the written file
+:w !sudo sh -c "cat > %"  -             "                            "
 
+```
 More details:
 https://www.cs.oberlin.edu/~kuperman/help/vim/markers.html
 
