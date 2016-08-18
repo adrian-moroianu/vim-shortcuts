@@ -23,7 +23,10 @@ ge       -   Move backwards to next word, with cursor on last character (use gE 
 
 CTRL+u   -   Move up by half a page
 CTRL+d   -   Move down by half a page
-H        -   Move cursor to header (top) line of current visible windo
+CTRL+b   -   Move up by a page
+CTRL+f   -   Move down by a page
+
+H        -   Move cursor to header (top) line of current visible window
 M        -   Move cursor to middle line of current visible window
 L        -   Move cursor to last line of current visible window
 
