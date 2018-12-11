@@ -163,6 +163,11 @@ CTRL+X   -   Decrement the number at cursor
 .        -   Repeat last change or delete
 ;        -   Repeat last f, t, F, or T command
 ,        -   Repeat last f, t, F, or T command in opposite direction
+
+vim +10 <file_name>            - opens the file at line 10
+vim +/bash cronjob-lab.yml     - opens the file cronjob-lab.yml on the first occurence of bash
+
+vim scp://balasundaramm@mgmt-bst:22/~/automation/test-file.txt - Edit a remote file via scp
 ```
 
 ### HISTORY/COMMAND BUFFER
@@ -191,6 +196,9 @@ CTRL+p          -   Press after typing part of a word. It scrolls up the list of
 :vertical ball      -   opens up all available buffero in vertical split window
 :q                  -   close the buffer window
 :help buffers       -   help for buffers
+:r <file_path>      -   reads a file from the path to the buffer
+:r !<command>       -   reads the output of the command into buffer
+:.! cat <file_path> -   reads the output of the command (eg: cat) into buffer or !! in ex-mode
 ```
 
 ### TAB VIEWS
@@ -254,6 +262,11 @@ CTRL+w v       -   Split current window vertically
 CTRL+w c       -   Close current window
 CTRL+w m       -   Move to window according to motion m
 CTRL+w o       -   Maxmize current window (note: this overwrites your current window configuration)
+
+# EX Mode
+:Vex           - Open Vertical Split in ex mode with file browser
+:Sex           - Open Vertical Split in ex mode with file browser
+
 ```
 
 ### MOVING WINDOWS
